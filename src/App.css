@@ -1,12 +1,115 @@
-.App {
+body {
+	/* height: 100%; */
+	overflow: hidden;
+	background-color: rgb(203, 255, 203);
+}
+
+#wrapper {
+	/* margin-right: -50px;
+	padding-right: 50px; */
+	overflow: hidden;
+	height: 5000px;
 	text-align: center;
 }
 
-#user {
+#wrapper-child {
+	/* width: 100vw; */
+	margin-right: -50px;
+	padding-right: 50px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.obstacle {
+	width: 40px;
+	height: 40px;
+	background-color: orange;
+	position: absolute;
+}
+
+#map {
+	z-index: 1;
 	position: relative;
+	width: 100vw;
+	padding-top: -20px;
+	/* transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+}
+
+.area {
+	width: 100vw;
+	transition: all 0.3s;
+	position: relative;
+}
+
+#backyard {
+	height: 3000px;
+	background-color: rgb(203, 255, 203);
+}
+
+#city {
+	height: 1000px;
+	background-color: lightslategray;
+}
+
+.enemy {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	overflow-x: hidden;
+}
+
+#userContainer {
+	height: 100vh;
+	margin-top: 100px;
+}
+
+#user {
+	z-index: 100;
+	position: fixed;
 	width: 50px;
 	height: 50px;
+	padding: 0px;
+	margin: 0px;
 	background-color: yellow;
 	border-radius: 50%;
-	border: 1px solid black;
+	border: 1px solid grey;
+	transition: all 0.5s;
+	transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideinright {
+	from {
+		margin-left: 60%;
+	}
+
+	to {
+		margin-left: -10%;
+	}
+}
+
+@keyframes slideinright-half {
+	from {
+		margin-left: 40%;
+	}
+	to {
+		margin-left: -20%;
+	}
+}
+
+@keyframes slideinleft {
+	from {
+		margin-left: -60%;
+	}
+	to {
+		margin-left: 40%;
+	}
+}
+
+@keyframes slideinleft-half {
+	from {
+		margin-left: -40%;
+	}
+	to {
+		margin-left: 20%;
+	}
 }
